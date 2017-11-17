@@ -1,0 +1,81 @@
+$overlay-z-index: 1;
+$z-index-menu: 2;
+$menu-bg: #353535;
+$submit-green: #278327;
+
+@import "./common/responsive-menu";
+@import "./common/overlay";
+@import "./common/input";
+@import "./common/notification";
+@import "./project/project-list";
+@import "./project/project-new";
+@import "./project/project-edit";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .link-new {
+        color: #00f1ff;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;;
+        padding: 12px;
+        display: block;
+        i {
+            margin-right: 15px;
+        }
+    }
+    
+    .link-new:hover {
+        background-color: #535353;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: white;   
+}
+
+.inline {
+    display: inline-block;
+}
+
+/*
+* Fade animations
+*/
+@keyframes fade-out {
+    0% {
+        opacity: 0.9;
+    }
+    100% { 
+        opacity: 0; 
+    }
+}
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+.fade-in {
+    animation: fade-in 1s forwards;
+}

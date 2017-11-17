@@ -1,0 +1,138 @@
+.project-edit {
+    padding: 25px;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+     .tasks {
+         margin-top: 25px;
+         .form-new-task {
+             input {
+                 font-size: 14px;
+                 background-color: transparent;
+                 padding: 2px;
+             }
+
+             .hidden {
+                 display: none;
+             }
+         }
+        .add-task {
+            color: black;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            margin-top: 15px;
+            i {
+                margin-right: 8px;
+            }
+        }
+        .task {
+            margin-bottom: 15px;
+            .light-gray {
+                color: #999;
+            }
+        }
+        .task.completed {
+            text-decoration: line-through;
+            color: #999 !important;
+        }
+        .task.late {
+            color: red;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .tasks {
+            .list {
+                overflow: auto;
+                max-height: 400px;
+                margin-bottom: 15px;
+            }
+        }
+        .title {
+            position: relative;
+    
+            @media (min-width: 601px) {
+                margin-top: 30px;
+                input {
+                    width: 100%;
+                }
+            }
+
+            .project-overview {
+                font-weight: bold;
+                top: 0px;
+                right: 160px;
+                font-weight: bold;
+                position: absolute;
+            }
+    
+            .delete-project {
+                color: red; 
+                position: absolute;
+                right: 15px;
+                top: 0px;
+                text-decoration: none;
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    /**
+     * Mobile display
+     */
+     @media (max-width: 600px) 
+     {
+         div.inline {
+             width: 100%;
+             margin-bottom: 8px;
+         }
+         .title {
+            .delete-project {
+                color: white; 
+                background-color: red;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                text-decoration: none;
+                padding: 8px 0px;
+                i {
+                    margin-right: 8px;
+                }
+            }
+         }
+         .tasks {
+             .list {
+                 max-height: 180px;
+                 overflow: auto;
+             }
+            .form-new-task {
+                input {
+                    font-size: 16px;
+                    background-color: white;
+                    padding: 8px;
+                    width: -webkit-fill-available;
+                    border: solid 1px #C0C0C0;
+                }
+
+                button {
+                    width: 100%;
+                    background-color: $submit-green;
+                    color: white;
+                    text-align: center;
+                    padding: 8px 0px;
+                    border: none;
+                }
+
+                .hidden {
+                    display: none;
+                }
+            }
+        }
+     }
+}

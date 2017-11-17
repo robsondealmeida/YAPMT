@@ -1,0 +1,15 @@
+.project-list {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 8px;
+
+    .project {
+        padding: 12px;
+        cursor: pointer;
+    }
+
+    .project:hover {
+        background-color: #535353;
+    }
+}

@@ -1,0 +1,20 @@
+.title-input {
+    border: none;
+    border-bottom: solid 1px black;
+    font-family: "Roboto";
+    font-size: 24px;
+    background-color: #F0F0F0;
+}
+
+.title-input-error-message {
+    color: red;
+    line-height: 2;
+}
+
+.title-input.error {
+    border-color: red;
+}
+
+.title-input:focus {
+    outline: none;
+}
